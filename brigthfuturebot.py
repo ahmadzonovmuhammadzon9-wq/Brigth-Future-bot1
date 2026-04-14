@@ -169,10 +169,8 @@ def callback(call):
 def keyboard(message):
     n ="Nomer : 55-202-73-73\nInstagram : bright_future.asaka\nTelegram : @Bright_future_asaka "
     if message.text =="Brigth Future haqida!":
-        i =InlineKeyboardMarkup(row_width=2)
-        i1 =InlineKeyboardButton(text="Brigth Future bilan boglanish",callback_data="aloqa")
-        i.add(i1)
-        bot.send_message(message.chat.id,f"{uz1}",reply_markup=i)
+
+        bot.send_message(message.chat.id,f"{uz1}")
     elif message.text =="sozlamalar":
         q = ReplyKeyboardMarkup(resize_keyboard=True)
         q1 =KeyboardButton("Tilni ozgartirish")
@@ -355,10 +353,7 @@ def keyboard(message):
         bot.send_message(message.chat.id, f"{n}")
     elif message.text =="admin":
         bot.send_message(message.chat.id,"admin: @Muhammadjon2202 ")
-@bot.callback_query_handler(func=lambda call: True)
-def call(call):
-    if call.data == "aloqa":
-        bot.send_message(call.message.chat.id," Aloqa uchun nomer:55-202-73-73 ")
+
 
 
 
